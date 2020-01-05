@@ -1,6 +1,8 @@
 # Simple JS/HTML/SASS/Webpack starter
 
-A very simple starter kit i made while learning webpack.
+A very simple starter kit i made to learn:
+* Webpack
+* eslint
 
 ### Installation
 
