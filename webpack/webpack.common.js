@@ -18,7 +18,8 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[name].[hash].[ext]',
-            outputPath: 'imgs'
+            outputPath: 'imgs',
+            esModule: false,
           }
         }
       }
