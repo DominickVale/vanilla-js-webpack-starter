@@ -30,6 +30,7 @@
 		"webpack-merge": "^4.2.2"
 	},
 	"dependencies": {
-		"boostrap": "^2.0.0"
+		"boostrap": "^2.0.0",
+		"copy-webpack-plugin": "^5.1.1"
 	}
 }

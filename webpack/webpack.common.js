@@ -1,11 +1,18 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const path = require('path')
+const CopyPlugin = require('copy-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-  entry: './index.js',
-  plugins: [new HtmlWebpackPlugin({
-    template: './index.html'
-  })],
+  plugins: [
+    new CleanWebpackPlugin(),
+    new CopyPlugin([
+      { from: 'public', to: './' }
+    ]),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './public/index.html',
+    }),
+  ],
   module: {
     rules: [
       {
@@ -22,7 +29,17 @@ module.exports = {
             esModule: false,
           }
         }
-      }
+      },
+      {
+        test: /\.(ttf|otf|woff|woff2)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[hash].[ext]',
+            outputPath: 'fonts',
+          }
+        }
+      },
     ]
   }
 }

@@ -3,6 +3,7 @@
 A very simple starter kit i made to learn:
 * Webpack
 * eslint
+* bootstrap
 
 ### Installation
 
